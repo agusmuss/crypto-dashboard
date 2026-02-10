@@ -140,8 +140,32 @@ export default function CoinList({
                         ? 'border-amber-300 bg-amber-300/20 text-amber-700'
                         : 'border-slate-200 text-slate-500 hover:border-slate-400 dark:border-slate-700 dark:text-slate-300'
                     }`}
+                    aria-label={isFavorite ? 'Remove from favorites' : 'Add to favorites'}
                   >
-                    {isFavorite ? '?' : '?'}
+                    {isFavorite ? (
+                      <svg
+                        viewBox="0 0 20 20"
+                        aria-hidden="true"
+                        className="h-4 w-4 fill-current"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.955a1 1 0 00.95.69h4.157c.969 0 1.371 1.24.588 1.81l-3.363 2.444a1 1 0 00-.364 1.118l1.286 3.955c.3.921-.755 1.688-1.54 1.118l-3.363-2.444a1 1 0 00-1.175 0l-3.363 2.444c-.784.57-1.838-.197-1.539-1.118l1.285-3.955a1.25 1.25 0 00-.363-1.118L2.218 9.382c-.783-.57-.38-1.81.588-1.81h4.157a1 1 0 00.95-.69l1.286-3.955z" />
+                      </svg>
+                    ) : (
+                      <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                        className="h-4 w-4"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.8"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M11.48 3.499a.75.75 0 011.04 0l2.668 2.534c.236.224.543.354.868.37l3.716.177a.75.75 0 01.42 1.31l-2.78 2.23a1.25 1.25 0 00-.404 1.29l.91 3.536a.75.75 0 01-1.1.82l-3.154-1.86a1.25 1.25 0 00-1.268 0l-3.154 1.86a.75.75 0 01-1.1-.82l.91-3.536a1.25 1.25 0 00-.404-1.29l-2.78-2.23a.75.75 0 01.42-1.31l3.716-.177a1.25 1.25 0 00.868-.37l2.668-2.534z"
+                        />
+                      </svg>
+                    )}
                   </button>
                 </span>
               </button>
