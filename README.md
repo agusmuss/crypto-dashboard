@@ -38,6 +38,11 @@ src/
   types.ts
 ```
 
+## Possible Improvements
+- Add price alerts and watchlist sorting
+- Add chart tooltips/hover details
+- Support pagination or a larger coin universe
+
 ## Screenshots
 ![Light mode](docs/screenshot-1.png)
 ![Dark mode](docs/screenshot-2.png)
